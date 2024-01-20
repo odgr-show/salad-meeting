@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+html {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+
+body {
+  color: #333;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  position: relative;
+  width: min(90%, 1120px);
+  margin: 0 auto;
+}
+
+.pop {
+  font-family: 'Poppins', sans-serif;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-family: 'Dancing Script', cursive;
+  font-size: 12.5rem;
+  font-weight: 700;
+  color: #80BA4A;
+  opacity: .1;
+  transform: translateY(-20%);
+}
+
+.section-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #80BA4A;
+  margin-bottom: 60px;
+}
+
+/**
+ヘッダー
+**/
+.header {
+  padding-block: 27px;
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.04em;
+
+    &>span {
+      color: #80BA4A;
+    }
+  }
+
+  &__menu {
+    & li:not(:first-of-type) {
+      margin-left: 40px;
+
+    }
+
+    & a {
+      transition: .3s ease;
+
+      &:hover {
+        color: #80BA4A;
+        transition: .3s ease;
+      }
+    }
+  }
+}
+
+/**
+メイン
+**/
+
+.hero {
+  position: relative;
+  background: url(../imaege/hero.jpg) center/cover no-repeat;
+  height: 540px;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 90px;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: .2;
+
+  }
+
+  &__inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+
+    & p {
+      font-size: 1.25rem;
+    }
+
+    & h1 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+/**
+コンセプト
+**/
+.concept {
+  margin-bottom: 120px;
+
+  & h3 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 60px;
+  }
+
+  &__column {
+    width: 48%;
+
+    &>p {
+      line-height: 2;
+    }
+  }
+
+  &__img {
+    background: url(../imaege/concept.jpg) center/cover no-repeat;
+    height: 340px;
+    border-radius: 20px;
+  }
+}
