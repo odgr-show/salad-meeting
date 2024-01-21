@@ -6,5 +6,5 @@ export default {
         outDir: '../dist',
         emptyOutDir: true,
     },
-    plugins: [eleventyPlugin()],
+    // plugins: [],
 };
