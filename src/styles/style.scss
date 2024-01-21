@@ -6,6 +6,7 @@ html {
 
 body {
   color: #333;
+  box-sizing: border-box;
 }
 
 img {
@@ -25,6 +26,16 @@ li {
   position: relative;
   width: min(90%, 1120px);
   margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+
+  & > span {
+    color: #80BA4A;
+  }
 }
 
 .pop {
@@ -47,13 +58,15 @@ li {
   color: #80BA4A;
   opacity: .1;
   transform: translateY(-20%);
+
+  z-index: -1;
 }
 
 .section-title {
   font-size: 1.25rem;
   font-weight: 500;
   color: #80BA4A;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 /**
@@ -62,14 +75,9 @@ li {
 .header {
   padding-block: 27px;
 
-  &__logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.04em;
+  & .container {
 
-    &>span {
-      color: #80BA4A;
-    }
+    @media screen and (max-width: 768px) {}
   }
 
   &__menu {
@@ -95,7 +103,7 @@ li {
 
 .hero {
   position: relative;
-  background: url(../imaege/hero.jpg) center/cover no-repeat;
+  background: url(../image/hero.jpg) center/cover no-repeat;
   height: 540px;
   border-radius: 30px;
   overflow: hidden;
@@ -149,14 +157,108 @@ li {
   &__column {
     width: 48%;
 
-    &>p {
+    & > p {
       line-height: 2;
     }
   }
 
   &__img {
-    background: url(../imaege/concept.jpg) center/cover no-repeat;
+    background: url(../image/concept.jpg) center/cover no-repeat;
     height: 340px;
     border-radius: 20px;
   }
+}
+
+/**
+サービス
+**/
+.service {
+  margin-bottom: 120px;
+
+
+  &__inner {
+    position: relative;
+    margin-bottom: 40px;
+
+    &.flex:nth-of-type(even) {
+      flex-direction: row-reverse;
+
+      & .heading {
+        left: 0;
+      }
+    }
+  }
+
+  &__column-left {
+    width: 40%;
+
+    & img {
+      border-radius: 20px;
+    }
+
+  }
+
+  &__column-right {
+    width: 55%;
+
+    & > h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 24px;
+    }
+
+    & > p {
+      line-height: 2;
+    }
+  }
+}
+
+/**
+カンパニー
+**/
+.company {
+  margin-bottom: 120px;
+
+  &__list {
+    width: min(90%, 900px);
+    margin-left: auto;
+
+    & dt {
+      width: 30%;
+      padding: 3rem;
+      font-weight: 500;
+      border-bottom: 1px solid #D2ECBA;
+    }
+
+    & dd {
+      width: 70%;
+      padding: 3rem;
+      border-bottom: 1px solid #D2ECBA;
+    }
+  }
+}
+
+/**
+画像
+**/
+.images {
+  & img {
+    width: 24%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}
+
+/**
+フッター
+**/
+footer {
+  text-align: center;
+  padding: 90px 0;
+}
+
+.copyright {
+  font-size: 0.75rem;
+  margin-top: 40px;
 }
